@@ -44,3 +44,15 @@ try:
     print(customer["email"])
 except KeyError:
     print("KeyError: email does not exist")
+
+# Exercise 4 
+
+# Print each key and value using .items()
+for key, value in customer.items():
+    print(f"{key}: {value}")
+
+# Loop without .items()
+for key in customer:
+    print(key)
+
+# Without .items(), the loop only prints the keys. With .items(), the loop gives us both the keys and values.
