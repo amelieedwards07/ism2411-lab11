@@ -33,3 +33,14 @@ print(customer)
 # Delete the email
 del customer["email"]
 print(customer)
+
+# Exercise 3
+
+# Use .get() to look for the deleted email
+print(customer.get("email", "no email on file"))
+
+# Use brackets to look for the same email
+try:
+    print(customer["email"])
+except KeyError:
+    print("KeyError: email does not exist")
