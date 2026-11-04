@@ -105,3 +105,25 @@ catalog = {
 for product, details in catalog.items():
     if details["stock"] < 20:
         print(f"LOW STOCK: {product} - {details['stock']} remaining")
+
+# Exercise 8 
+
+transactions = [
+    {"region": "South", "amount": 300},
+    {"region": "North", "amount": 150},
+    {"region": "South", "amount": 200}
+]
+
+# Create an empty summary dictionary
+summary = {}
+
+# Add up sales for each region
+for transaction in transactions:
+    region = transaction["region"]
+    amount = transaction["amount"]
+
+    summary[region] = summary.get(region, 0) + amount
+
+# Print totals sorted by region
+for region in sorted(summary):
+    print(f"{region}: ${summary[region]}")
