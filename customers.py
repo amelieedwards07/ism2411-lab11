@@ -56,3 +56,25 @@ for key in customer:
     print(key)
 
 # Without .items(), the loop only prints the keys. With .items(), the loop gives us both the keys and values.
+
+# Exercise 5 
+
+tier_discounts = {
+    "bronze": 0,
+    "silver": 0.05,
+    "gold": 0.10,
+    "platinum": 0.15
+}
+
+# Find the customer's discount
+tier = customer["tier"]
+discount = tier_discounts.get(tier, 0)
+
+# Calculate the final price
+price = 200
+final_price = price * (1 - discount)
+
+print(f"Tier: {tier}")
+print(f"Discount: {discount:.0%}")
+print(f"Final price: ${final_price:.2f}")
+
