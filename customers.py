@@ -78,3 +78,18 @@ print(f"Tier: {tier}")
 print(f"Discount: {discount:.0%}")
 print(f"Final price: ${final_price:.2f}")
 
+# Exercise 6 
+
+customers = [
+    customer,
+    {"name": "Bob", "tier": "silver", "ytd_spend": 500},
+    {"name": "Carlos", "tier": "bronze", "ytd_spend": 200}
+]
+
+# Loop through each customer
+for person in customers:
+    tier = person["tier"]
+    discount = tier_discounts.get(tier, 0)
+    discount_amount = 300 * discount
+
+    print(f"{person['name']} - {tier} - ${discount_amount:.2f} discount")
