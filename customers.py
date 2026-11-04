@@ -4,7 +4,7 @@
 # Reflection 2:
 # This reminds me of PivotTables in Excel, where you can group sales by region and calculate totals. Python can be better for large datasets because it can automatically organize and calculate everything without having to do it manually.
 
-# Exercise 1 - One Customer
+# Exercise 1 
 
 customer = {
     "name": "Alice",
@@ -18,4 +18,18 @@ print(customer["email"])
 print(customer["tier"])
 print(customer["ytd_spend"])
 
+print(customer)
+
+# Exercise 2 
+
+# Add a phone number
+customer["phone"] = "239-555-1234"
+print(customer)
+
+# Change the tier to platinum
+customer["tier"] = "platinum"
+print(customer)
+
+# Delete the email
+del customer["email"]
 print(customer)
